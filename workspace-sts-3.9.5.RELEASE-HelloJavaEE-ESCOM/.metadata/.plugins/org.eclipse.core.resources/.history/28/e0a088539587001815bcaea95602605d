@@ -1,0 +1,14 @@
+package mx.com.hsbc.registro;
+
+import javax.jws.WebService;
+
+@WebService
+public interface HelloWorld {
+
+	public void RegistroAlumno(String alumno, String boleta );
+	public void GeneraFicha(String materias, int cantidad);
+	public void GeneraraPeticion(String respuesta);
+	 
+
+}
+

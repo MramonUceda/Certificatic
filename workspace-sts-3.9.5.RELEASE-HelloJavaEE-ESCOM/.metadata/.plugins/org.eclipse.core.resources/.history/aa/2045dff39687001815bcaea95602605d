@@ -1,0 +1,13 @@
+package mx.com.ipn.compraETS;
+
+import javax.jws.WebService;
+
+public interface servicioETS {
+	
+	
+	
+	public void RegistroAlumno(String alumno, String boleta );
+	public void GeneraFicha(String materias, int cantidad);
+	public void GeneraraPeticion(String respuesta);
+	 
+}

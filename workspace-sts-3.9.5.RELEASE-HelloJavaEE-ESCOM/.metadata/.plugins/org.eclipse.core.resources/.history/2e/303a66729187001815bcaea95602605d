@@ -1,0 +1,28 @@
+package mx.com.ipn.compraETS;
+
+public class ServioETSImpl implements servicioETS {
+
+	@Override
+	public void RegistroAlumno(String alumno, String boleta) {
+		System.out.println("Registro de: " + alumno + "No. Boleta: " + boleta);		
+	}
+
+	@Override
+	public void GeneraFicha(String materias, int cantidad) {
+		System.out.println("Materias: " + materias + "Cantidad: " + cantidad);
+		
+	}
+
+	@Override
+	public void GeneraraPeticion(String respuesta) {
+		String s = respuesta.toLowerCase();
+		if (s.equals("si")) {
+			System.out.println("Registro Existosa");
+		} else {
+			System.out.println("Proceso cancelado");
+
+		}
+		
+	}
+	
+}

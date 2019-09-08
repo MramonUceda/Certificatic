@@ -1,0 +1,22 @@
+package main;
+
+import com.castillo.jaxws.clientes.Cliente;
+import com.castillo.jaxws.clientes.Clientes;
+import com.castillo.jaxws.clientes.ClientesImplService;
+
+public class RegistroCliente {
+
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		Clientes clientes = new ClientesImplService().getClientesImplPort();
+		Cliente  clienteNuevo = new Cliente();
+		//agregando cliente
+		clientes.agregarCliente(clienteNuevo);
+
+	}
+
+}

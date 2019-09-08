@@ -1,0 +1,23 @@
+
+package mx.com.hsbc.registro;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "mx.com.hsbc.registro.HelloWorld")
+public class HelloWorldImpl implements HelloWorld {
+
+	@Override
+	public void RegistroAlumno(String alumno, String boleta) {
+		// TODO Auto-generated method stub
+		System.out.println("Alumno:" + alumno + "Boleta: " + boleta);
+	}
+
+	@Override
+	public String sayHi(String string) {
+		// TODO Auto-generated method stub
+		String mensaje
+		return ;
+	}
+
+
+}

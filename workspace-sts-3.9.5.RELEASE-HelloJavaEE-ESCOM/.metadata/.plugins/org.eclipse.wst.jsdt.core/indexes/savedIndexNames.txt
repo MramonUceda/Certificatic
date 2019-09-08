@@ -1,0 +1,4 @@
+INDEX VERSION 1.4+D:\Certificatic Java Spring\workspace-sts-3.9.5.RELEASE-HelloJavaEE-ESCOM\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3835074623.index
+3710388221.index
+4159816519.index

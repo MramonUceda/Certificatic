@@ -1,0 +1,23 @@
+package mx.com.ipn.compraETS;
+
+public class ServioETSImpl implements servicioETS {
+
+	@Override
+	public void RegistroAlumno(String alumno, String boleta) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void GeneraFicha(String materias, int cantidad) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void GeneraraPeticion(String respuesta) {
+		// TODO Auto-generated method stub
+		
+	}
+	void
+}

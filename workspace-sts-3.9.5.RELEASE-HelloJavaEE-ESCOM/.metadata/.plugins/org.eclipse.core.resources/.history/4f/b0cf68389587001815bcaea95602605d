@@ -1,0 +1,36 @@
+
+package mx.com.hsbc.registro;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "mx.com.hsbc.registro.HelloWorld")
+public class HelloWorldImpl implements HelloWorld {
+
+	@Override
+	public void RegistroAlumno(String alumno, String boleta) {
+		System.out.println("Registro de: " + alumno + "No. Boleta: " + boleta);
+	}
+
+	@Override
+	public void GeneraFicha(String materias, int cantidad) {
+		System.out.println("Materias: " + materias + "Cantidad: " + cantidad);
+
+	}
+
+	@Override
+	public void GeneraraPeticion(String respuesta) {
+		String s = respuesta.toLowerCase();
+		if (s.equals("si")) {
+			System.out.println("Registro Existosa");
+		} else {
+			System.out.println("Proceso cancelado");
+
+		}
+
+	}
+
+	public String sayHi(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

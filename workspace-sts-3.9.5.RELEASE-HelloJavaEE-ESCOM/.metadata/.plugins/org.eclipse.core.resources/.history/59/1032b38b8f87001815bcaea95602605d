@@ -1,0 +1,5 @@
+package mx.com.ipn.compraETS;
+
+public class ServioETSImpl implements servicioETS {
+	void
+}

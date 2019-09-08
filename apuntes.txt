@@ -1,0 +1,145 @@
+1.-Heroku
+2.-Documentación
+3.-descargar el .exe
+
+
+***********************************************************************************************************************
+
+**Arquitecrutas modernas de aplicaciones web**
+
+Web service :JAX-WS & JAX-RS.
+
+<xml> ---> forma de comunicación entre diferentes app´s
+{jason}  ---> forma de comunicación entre diferentes app´s
+
+Api: Conjunto de clases que nos permite acceder o manipular info local o remota.
+
+
+API Gateway <--- distribuye los servicios.
+
+
+BEACON (Eddystone) ---> detecta tu dispositivo y te manda alertas automaticamente.
+
+DAS Button: Esto hace una acción en especifica.
+
+
+Metodologías de trabajo:
+*Twelve factor app metodologia para implementar aplicaciones SAS, Cloud(Heroku fue el diseñador)
+*Domain Drive Design.
+
+
+Objetivo final del curso es hacer está app:
+
+http://ipn-escom-registro.herokuapp.com/#/home   <--- angular fron y spring el back
+
+
+
+*******************************************************************************************
+¿Que es maven?: Nos ayuda a manejar las configuraciones de manera homóloga. Nos ayuda gestionar el tema de las librerias.
+Con maven trabajeromos con los arquetipos (template): https://maven.apache.org/archetype/index.html   usaremos JAX-WS
+
+
+
+**************************************************************************************************
+1.-Se crea una carpeta 
+2.- Se corre el comando: mvn archetype:generate  <-----  Using an Archetype descarga los arquetipos(archetype).
+3.-despues jaxws <-- para ver los arquetipos de jaxws, selecionamos el numero 4 (remote -> org.apache.cxf.archetype:cxf-jaxws-javafirst (Creates a project for developing a Web service starting from Java code)
+),seleccionamoss el 134,
+4.- Confirm properties configuration:
+groupId: mx.com.hsbc.registro
+artifactId: RegistroProspectos
+version: 1.0-SNAPSHOT
+package: mx.com.hsbc.registro
+5.-ls y ya tenemos nuestro proyecto en nuestra carpte.
+6.- abrirmos sts e importamos nuestro proyecto  (D:\Certificatic Java Spring\CursosEscomCosas)  hay dos carpetas en POM lleva toda la configuración
+7.-corremos move installa en run ass
+8.- asignamos servidor windows/show viewd/ servers/ok , click derecho/new server/ apache tomcat 8.5/jdk 8/finish.
+9.- run ass on server tomcat 8/next/ finisg
+****wsdl archivo para servcios web soap**** (estandar de comunicación muy segura) "OJOS REVISAR"
+
+
+
+
+1.- sOAPUI
+2.- NUEVO PROYECTO
+3.- WSDL: 
+
+**********************************
+Crear web service en soap
+1.-interface colocar la anotacion @webservice
+2.- en la implementacion o clase colocar  @webservice(endpointInterface = "mx.com.ipn.compraETS.servicioETS")
+(inyecion de dependecinas en la clase bean)
+3.- En bean :
+<jaxws:endpoint 
+id="registroclientes"  <-- nombre de la clase letro minuscula principal
+implementor ="mx.com.hsbc.registro.RegistroClientes" <--- direccion de la implementacion
+address= "/RegistroClientes"<--- nombre de la clase
+
+**********************************************************************************************************
+
+Metodología Twelve Factor , 12 puntos
+1.-Versionador
+2.-Dependencias (aislar dependecinas)
+....
+
+
+
+_______________________________________________________________________________
+Importando proyecto de Eduardo al STS https://github.com/EduardoCM/HelloJAXWS.git
+Borramos la anotacion @test y se corre
+
+
+Framework para la metodologia TDD (test drive development): Junit5, mockiyo,arquillian.
+-------------------------------------------------------------
+
+
+Creando un proyecto nuevo:
+
+1.- java proyecto
+2.- console ingresamos a la ruta del proyecto
+3.- generar servicio de cliente soap: 
+waimport -version <-- vemos la version
+wsimport -keep -verbose url del wsdl (http://localhost:8080/HelloJAXWS/Clientes?wsdl)  <--- crea cliente especifico para esa url y poder usar el wsdl (/ClietneRegistro)
+
+
+corriendo en heroku:
+
+en la consola nos posicionamos en la clase HelloJAXWS
+comando heroku login
+vamos al navegador e ingresamos a heroku mave, copiamos el plugin y en nuestro proyecto en la parte de POM tag plugin pegamos el plugin
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+**(en maven hay un archivo POM.xm)** investigar las funcionalidades https://maven.apache.org/pom.html  :
+
+<groupId> org.shcp.cotizador </ groupId>
+  <artifactId> nombre del proyecto </ artifactId>
+    <version> version de proyecto </ version>
+	
+	
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+package mx.com.ipn.compraETS;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "mx.com.ipn.compraETS.servicioETS")
+public class ServioETSImpl implements servicioETS {
+
+	@Override
+	public void RegistroAlumno(String alumno, String boleta) {
+		String mensaje = ("Registro de: " + alumno + "No. Boleta: " + boleta);
+	}
+
+	@Override
+	public String GeneraFicha(String materias, int cantidad) {
+		String mensaje = "Materias: " + materias + "Cantidad: " + cantidad;
+		return mensaje;
+	}
+
+	@Override
+	public void GeneraraPeticion(String respuesta) {
+		String s = respuesta.toLowerCase();
+		if (s.equals("si")) {
+			System.out.println("Registro Existosa");
+		} else {
+			System.out.println("Proceso cancelado");
+
+		}
+
+	}
+
+}

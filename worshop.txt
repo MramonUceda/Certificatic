@@ -1,0 +1,75 @@
+
+Descargar:
+1.-JDK 1.8 o posteiores
+2.- Maven
+3.-Apache Tomcat 8 y Payara (Servidores)
+4.-Eclipse
+5.-Postman
+6.-SOAPUI
+
+7.-Git
+7.1.-Crear cuenta Git
+8.-Crear cuenta Heroku
+9.- Swagger.io crear cuenta
+
+API Description Languege (leer un poco para entender que es swagger)
+
+10.- node.js
+11.-npm
+12.-Angular
+
+
+
+*****************************************************************************************
+Configuraciones.
+Configurar variables de entorno para JAVA (JAVA_HOME) y para MVC (M2_HOME)
+java -version
+javac -version
+mvn -version   <---- agregas la variable m2 y m2_home
+
+mvn archetype:generate <--- descarga las librerias remotas (exit control + c)
+
+*******************************************
+
+Descargar STS : https://spring.io/tools/sts/all   <--- spring tolls suite (ejecutoamos STS)
+
+Crear Un app java web
+
+Desplegar en apache tomcat
+
+Crear usuario Tomcat... :
+1.-Stop al server
+2.-se cierra eclipse (STS).
+3.- Abrimos consola (SSH, SHEL o al que sea).
+4.-Abrimos la ruta de los servidores desde la consola.
+5.- Le damos permisos de ejecicion al archivo startup.sh o .bat
+5.1.- si no funciona podemos correr el archivo D:\Certificatic Java Spring\Servidores\apache-tomcat-8.5.32\apache-tomcat-8.5.32\apache-tomcat-8.5.32\bin\startup.sh
+6.- Para verificar que esté funcionando abrirmos nuestro navegador e ingresamos a nuestro host local en el puerto 8080 y nos tiene 
+que abrir el home del server.
+7.- Crear usuario para su administración () Manager App.
+7.1.-Al ingresar cualquier usuario no nos da acceso entonces le tenemos que dar cancelar para validar en e mensaje 401 como agregar el usuario admin:
+
+Usted no está autorizado para ver esta página. Si no ha cambiado ningún archivo de configuración, examine el archivo conf / tomcat-users.xml en su instalación. Ese archivo debe contener las credenciales para que pueda usar esta aplicación web.
+
+Por ejemplo, para agregar la función manager-gui a un usuario llamado tomcat con una contraseña de s3cret , agregue lo siguiente al archivo de configuración mencionado anteriormente.
+
+<role rolename = "manager-gui" />
+<user username = "admin" password = "admin" roles = "manager-gui" />
+Tenga en cuenta que para Tomcat 7 en adelante, las funciones requeridas para usar la aplicación de administrador se cambiaron de la función de administrador único a las siguientes cuatro funciones. Tendrá que asignar los roles requeridos para la funcionalidad a la que desea acceder.
+
+manager-gui : permite el acceso a la GUI HTML y las páginas de estado
+manager-script : permite el acceso a la interfaz de texto y a las páginas de estado
+manager-jmx - permite el acceso al proxy JMX y las páginas de estado
+estado del administrador : solo permite el acceso a las páginas de estado
+La interfaz HTML está protegida contra CSRF pero el texto y las interfaces JMX no lo están. Para mantener la protección CSRF:
+
+A los usuarios con el rol de administrador-guía no se les deben otorgar los roles manager-script o manager-jmx .
+Si se accede a las interfaces de texto o jmx a través de un navegador (por ejemplo, para probar, ya que estas interfaces están pensadas para herramientas, no para humanos), entonces el navegador debe cerrarse para finalizar la sesión.
+Para obtener más información, consulte la aplicación de administrador sobre cómo hacerlo .
+
+8.- se corre el archivo startup.sh para levantar nuestro panel (localhost server).
+
+
+*******************************************
+
+

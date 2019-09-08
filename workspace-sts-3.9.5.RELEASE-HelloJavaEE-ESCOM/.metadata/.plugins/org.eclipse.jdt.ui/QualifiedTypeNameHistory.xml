@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="mx.com.ipn.compraETS.servicioETS"/>
+<fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="com.castillo.jaxws.clientes.Clientes"/>
+<fullyQualifiedTypeName name="com.castillo.jaxws.clientes.ClientesImplService"/>
+<fullyQualifiedTypeName name="com.castillo.jaxws.clientes.Cliente"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

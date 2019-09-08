@@ -1,0 +1,5 @@
+package mx.com.ipn.compraETS;
+
+public interface servicioETS {
+
+}
